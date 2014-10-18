@@ -49,7 +49,7 @@
       this.highlightedPixelCol = null;
     }
   };
-
+  
   ns.BaseTool.prototype.raiseSaveStateEvent = function (replayData) {
     $.publish(Events.PISKEL_SAVE_STATE, {
       type : pskl.service.HistoryService.REPLAY,

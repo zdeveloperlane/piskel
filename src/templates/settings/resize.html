@@ -16,5 +16,50 @@
       <input type="submit" class="button button-primary resize-button" value="Resize" />
       <input type="button" class="button resize-cancel-button" value="Cancel" />
     </form>
+    
+	<!-- Remove these elements if not in advanced mode -->
+	<!--   -->
+
+	<div class="settings-title">
+		Expand drawing area
+	</div>
+	<!-- Repair the CSS so it doesn't look so crazy. the plus sign is good, but it's not perfect. -->
+	<div class="settings-item">
+		<form action="" method="POST" name="expand-form">
+			<div class="expand-section">
+				<div class="expand-table-row">
+					<div class="expand-col"></div>
+					<div class="expand-col"><input type="text" class="textfield expand-field" name="expand-up"/></div>
+					<div class="expand-col"></div>
+					<div class="expand-table-row"><input type="submit" class="button button-primary expand-button" value="Expand" /></div>
+				</div>
+				<div class="expand-table-row">
+					<div class="expand-col"><input type="text" class="textfield expand-field" name="expand-left"/></div>
+					<div class="expand-col"></div>
+					<div class="expand-col"><input type="text" class="textfield expand-field" name="expand-right"/></div>
+					<div class="expand-table-row"></div>
+				</div>
+				<div class="expand-table-row">
+					<div class="expand-col"></div>
+					<div class="expand-col"><input type="text" class="textfield expand-field" name="expand-down"/></div>
+					<div class="expand-col"></div>
+					<div class="expand-table-row"><input type="button" class="button resize-cancel-button" value="Cancel" /></div>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<div class="settings-title">
+		Trim drawing area
+	</div>
+		<form action="" method="POST" name="trim-form">
+		<input type="submit" class="button button-primary trim-button" value="Trim" />
+		<input type="button" class="button resize-cancel-button" value="Cancel" />
+		</form>
+	</div>
+
+	<!--   -->
+	<!--   -->
+
   </div>
 </div>

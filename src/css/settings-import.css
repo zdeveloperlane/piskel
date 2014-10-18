@@ -2,10 +2,40 @@
 /* Import panel                                                                                 */
 /************************************************************************************************/
 
+
 .import-section,
+.expand-section,
 .resize-section {
   margin: 10px 0;
 }
+
+.expand-field{
+	width:40px;
+}
+
+.expand-container{
+	display:table;
+	border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+.expand-table-row{  
+	display:table-row;
+	width:100%;
+	text-align: center;
+	margin: 2px 0;
+    padding: 2px 0;
+}
+
+.expand-col{ 
+	display:table-cell;
+	border: 0;
+	margin: 2px 0;
+    padding: 2px 0;
+	text-align: center;
+}
+
 
 .file-input-button {
   margin-right: 8px;

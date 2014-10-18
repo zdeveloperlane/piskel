@@ -144,6 +144,37 @@
       }
       colorCache[c] = color;
       return color;
-    }
+    },
+    
+    
+    //ZADDED Needs to be far more efficient, but it is only javascript; hm.
+    //
+	getBounds : function( myframe ) {		
+		var xMin = 0;
+		var yMin = 0;
+		var xMax = 0;
+		var yMax = 0;
+		var isFirst = 1;
+		myframe.forEachPixel( function (p, col, row) {
+			if (p != Constants.TRANSPARENT_COLOR) {
+				if( !isFirst ){
+					if( col < xMin ){ xMin = col; }
+					if( col > xMax ){ xMax = col; }
+					if( row < yMin ){ yMin = row; }
+					if( row > yMax ){ yMax = row; }
+				}else{
+					xMin = col;
+					xMax = col;
+					yMin = row;
+					yMax = row;
+					isFirst = 0;
+				}
+			}
+		} );
+		return { xMin:xMin, yMin:yMin, xMax:xMax, yMax:yMax };
+	},
+    //
+    //END ZADDED
+    
   };
 })();
